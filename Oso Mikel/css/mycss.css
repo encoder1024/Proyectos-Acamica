@@ -10,21 +10,28 @@
     margin: 0;
 } */
 
+#contenedor-gral {
+    width: 960px;
+    margin: 0 auto 0 auto; /*centro la pagina completa en el viewport*/
+}
+
 #main {
     text-align: center;
 }
 
-nav {
+#menu {
     display: inline-block;
-    width: 90%;
+    width: 90%; /*Logro llevar el boton de contacto al 10% que queda a la izquierda del menú de navegación.*/
 }
 
-nav a {
-    text-decoration:none;
+#menu a {
+    text-decoration:none; /*quito el subrayado de los links del menú*/
+    font-size: 14px;
 }
 
 #menu li {
-    display: inline-block;
+    display: inline-block; /*muestro los links del menú uno al lado del otro*/
+    margin: 0px 30px 0px 30px;
 }
 
 #contacto {
@@ -38,8 +45,9 @@ nav a {
 }
 
 #contacto a {
-    text-decoration:none;
+    text-decoration:none; /*quito el subrayado de los links del botón contacto*/
     color: white;
+    font-size: 14px;
 }
 
 .box-1 {
@@ -48,13 +56,19 @@ nav a {
     border-color: black;
     border-radius: 10px;
     display: inline-block;
-    vertical-align: middle;
-    padding: 5px;
+    vertical-align: middle; /*logro que queden las cajas alineadas en forma vertical*/
+    padding: 15px;
     text-align: left;
+    margin-left: 10px;
 }
 
 .box-1 a {
     vertical-align: text-bottom;
+    font-size: 14px;
+}
+
+.box-1 p {
+    font-size: 14px;
 }
 
 .size-1 {
@@ -68,15 +82,13 @@ nav a {
     width: 50%;
 }
 
-.box-2 {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 5px;
-    text-align: left;
+#main #subt-matata {
+    padding-left: 380px;
+    text-align: right;
+}
+
+#img-ositos {
+    width: 960px;
 }
 
 #micasa {
@@ -85,6 +97,40 @@ nav a {
 
 #presupuesto {
     margin-bottom: 10px;
+}
+
+.box-titulo {
+    font-size: 14px;
+}
+
+.box-titulo.down {
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    height: 50%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+}
+
+.box-subtitulo.down {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    height: 50%;
+    width: 80%;
+    margin: -15% 0 0 -25%;
+}
+
+#vecinos {
+    position: relative; /*este atributo en el div padre hace que funcione el atributo en los hijos y se pueda dar ubicación a los mismos dentro del padre.*/
+    background: url('../img/fondo-vecinos.jpg') no-repeat center; /*recordar el tema de los .. para moverme por los niveles de carpetas*/
+    background-size: cover; /*extiende la foto a todo el fondo*/
+}
+
+#footer span {
+    display: inline-block;
 }
 /* #grupo-boxes:after {
     content: "";
