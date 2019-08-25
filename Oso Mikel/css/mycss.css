@@ -37,8 +37,8 @@
 #contacto {
     text-align: center;
     width: 20%;
-    box-shadow: 3px 3px 0 black;
-    background: magenta;
+    box-shadow: 3px 3px 0 rgb(122, 124, 128);
+    background: rgb(4, 215, 243);
     line-height: 60px;
     border-radius: 16px;
     padding: 5px 10px 5px 10px;
@@ -151,9 +151,26 @@
     position: relative; /*este atributo en el div padre hace que funcione el atributo en los hijos y se pueda dar ubicación a los mismos dentro del padre.*/
     background: url('../img/fondo-vecinos.jpg') no-repeat center; /*recordar el tema de los .. para moverme por los niveles de carpetas*/
     background-size: cover; /*extiende la foto a todo el fondo*/
+    margin-bottom: 24px;
 }
 
-#footer span {
+#visitas {
+    margin-bottom: 24px;
+}
+
+.derechos {
     display: inline-block;
+    width: 80.5%;
+    vertical-align: middle;
+}
+
+.socialmedia ul li {
+    display: inline-block;
+    margin: 0px 0px 0px 15px;
+}
+
+.socialmedia {
+    display: inline-block;
+    vertical-align: middle;
 }
 
