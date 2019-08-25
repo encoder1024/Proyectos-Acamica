@@ -55,11 +55,35 @@
     border-width: 1px;
     border-color: black;
     border-radius: 10px;
-    display: inline-block;
-    vertical-align: middle; /*logro que queden las cajas alineadas en forma vertical*/
+    display: inline-block; /*esta propiedad es fundamental para aplicar los float en las boxes*/
+    /* vertical-align: middle; logro que queden las cajas alineadas en forma vertical cuando no utilizo float. Pero si uso float no hace falta.*/
     padding: 15px;
     text-align: left;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+}
+
+.box-1.izq {
+    float: left;
+}
+
+.box-1.cen {
+    float: center; /*si cambio esta propiedad a right, el elemento no se sube al otro div, solo se mueve a la derecha pero sigue entre los otros dos div*/   
+}
+
+.box-1.der {
+    float: right;
+}
+
+#grupo-boxes-1::after { /*este código normaliza el flujo para que no se flote el siguiente div a las tres cajas que queremos flotar en linea*/
+    content: "";        /*no importa en que lugar del código escribamos toda esta definición, al leer la regla corrige bien las cajas y el texto*/
+    clear: both;
+    display: block; /*también puede ser table y parece funcionar de la misma forma*/
+}
+
+#grupo-boxes-2::after { /*este código normaliza el flujo para que no se flote el siguiente div a las tres cajas que queremos flotar en linea*/
+    content: "";        /*no importa en que lugar del código escribamos toda esta definición, al leer la regla corrige bien las cajas y el texto*/
+    clear: both;
+    display: block; /*también puede ser table y parece funcionar de la misma forma*/
 }
 
 .box-1 a {
@@ -73,13 +97,13 @@
 
 .size-1 {
     height: 250px;
-    width: 25%;
+    width: 29%;
 
 }
 
 .size-2 {
     height: 250px;
-    width: 50%;
+    width: 63%;
 }
 
 #main #subt-matata {
@@ -92,11 +116,11 @@
 }
 
 #micasa {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 #presupuesto {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .box-titulo {
@@ -119,7 +143,7 @@
     top: 80%;
     left: 30%;
     height: 50%;
-    width: 80%;
+    width: 75%;
     margin: -15% 0 0 -25%;
 }
 
@@ -132,3 +156,4 @@
 #footer span {
     display: inline-block;
 }
+
