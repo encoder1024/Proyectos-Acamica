@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.contenedor {
+  background: gray;
+  padding: 2em;
+  font-family: helvetica, sans-serif;
+  line-height: 1.5;
+}
+.float-left,
+.float-right,
+.clear {
+  padding: 0.5em 1em;
+}
+.float-left,
+.float-right {
+  width: 50%;
+}
+.float-left {
+  background: deeppink;
+}
+.float-right {
+  background: darkblue;
+  color: white;
+}
+.clear {
+  background: lightgreen;
+}
+
+/* ================
+  aquí empiezan tus estilos
+================== */
+
+
+
+/* debes flotar los elementos con clase float-left a la izquierda */
+
+.float-left {
+  float: left;
+}
+
+/* debes flotar los elementos con clase float-right a la derecha */
+
+.float-right {
+  float: right;
+}
+
+/* debes limpiar los floats de aquellos elementos con clase clear */
+
+/* .clear {
+  clear: both;
+} */
+
+/* debes evitar que se colapse el contenedor con cualquiera de las tres herramientas vistas: flotarlo, clearfix u overflow. */
+
+.clearfix:after {
+  content:'';
+  display: block;
+  clear: both;
+}
